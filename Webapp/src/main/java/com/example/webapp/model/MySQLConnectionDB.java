@@ -1,4 +1,4 @@
-package com.example.webapp;
+package com.example.webapp.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

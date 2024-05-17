@@ -1,4 +1,5 @@
-package com.example.webapp;
+package com.example.webapp.model;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,7 +7,6 @@ import java.sql.SQLException;
 
 public class LoginBean implements LoginDAO {
     Connection connection;
-
     {
         try {
             connection = MySQLConnectionDB.getMySQLConnection();
@@ -26,6 +26,7 @@ public class LoginBean implements LoginDAO {
         ResultSet rs = ps.executeQuery();
         return rs.next();
     }
+
 
 
 }

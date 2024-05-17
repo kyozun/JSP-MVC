@@ -1,4 +1,4 @@
-<%@ page import="com.example.webapp.LoginBean" %>
+<%@ page import="com.example.webapp.model.LoginBean" %>
 <%@ page import="java.sql.SQLException" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
@@ -23,7 +23,9 @@
     if (status) {
 %>
 
-<jsp:forward page="success.jsp"></jsp:forward>
+<jsp:forward page="success.jsp">
+
+</jsp:forward>
 
 <%
 } else {
