@@ -7,14 +7,14 @@ public class Users {
 
 
     //Constructor
-    public Users() {}
+    public Users() {
+    }
 
     public Users(int user_id, String user_name, String password) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.password = password;
     }
-
 
 
     public int getUser_id() {

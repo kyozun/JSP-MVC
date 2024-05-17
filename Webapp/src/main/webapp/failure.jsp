@@ -12,5 +12,7 @@
 </head>
 <body>
     <h1>Login failure</h1>
+    <button type="button" name="back" onclick="history.back()">back</button>
+
 </body>
 </html>

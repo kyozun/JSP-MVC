@@ -1,43 +1,30 @@
 package com.example.webapp;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginBean implements LoginDAO {
-//
-
-    private Statement statement = null;
     Connection connection;
 
     {
         try {
             connection = MySQLConnectionDB.getMySQLConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
 
     @Override
-    public boolean checkLoginStatement(String username, String password) throws SQLException {
-
-//        //Query
-//        String query = "select * from users where username = username and password = password";
-//
-//        //Tạo statement mỗi lần thực thi
-//        statement = connection.createStatement();
-//
-//        System.out.println(statement);
-//
-//        //Tạo đối tượng ResultSet để nhận kết quả từ database trả về
-//        ResultSet resultSet = statement.executeQuery(query);
-//
-//        if (!resultSet.isBeforeFirst()) {
-//            return false;
-//        }
-
-        return true;
+    public boolean checkLogin(String username, String password) throws SQLException {
+        //Dung prepare statement
+        String sql = "select * from users.users where username=? and password=?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, username);
+        ps.setString(2, password);
+        ResultSet rs = ps.executeQuery();
+        return rs.next();
     }
 
 

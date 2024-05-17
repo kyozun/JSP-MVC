@@ -1,5 +1,7 @@
 <%@ page import="com.example.webapp.LoginBean" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.SQLException" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <title>Login Controller</title>
@@ -12,7 +14,12 @@
 
     //Step2: Call instance of JavaBean(Model)
     LoginBean loginBean = new LoginBean();
-    boolean status = loginBean.checkLoginStatement(username, password);
+    boolean status;
+    try {
+        status = loginBean.checkLogin(username, password);
+    } catch (SQLException e) {
+        throw new RuntimeException(e);
+    }
     if (status) {
 %>
 

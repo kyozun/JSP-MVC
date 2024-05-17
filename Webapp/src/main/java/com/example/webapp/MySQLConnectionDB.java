@@ -1,4 +1,5 @@
 package com.example.webapp;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -7,9 +8,10 @@ public class MySQLConnectionDB {
 
     public static Connection getMySQLConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = null;
+        Connection connection;
+
         //Connection string: Chuoi ket noi den csdl
-        String connectionURL = "jdbc:mysql://localhost:3306";
+        String connectionURL = "jdbc:mysql://app-db:3306/users";
         connection = DriverManager.getConnection(connectionURL, "root", "pizza");
 
         return connection;
