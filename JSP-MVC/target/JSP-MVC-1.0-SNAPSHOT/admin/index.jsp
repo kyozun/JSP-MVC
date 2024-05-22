@@ -48,16 +48,14 @@
         EmployeeDAO employeeDAO = new EmployeeDAO(DBConnection.getConnection());
         int totalNumberOfemployee = employeeDAO.countTotalemployee();
         int totalNumberOfUser = employeeDAO.countTotalUser();
-//        int totalNumberOfAppointment = employeeDAO.countTotalAppointment();
-//        int totalNumberOfSpecialist = employeeDAO.countTotalSpecialist();
     %>
 
     <!-- row-1 -->
     <div class="row">
         <div class="col-md-4">
-            <div class="card my-card">
+            <div class="card ">
                 <div class="card-body text-center text-danger">
-                    <i class="fa-solid fa-user-employee fa-3x"></i><br>
+                    <i class="fas fa-user-circle fa-3x"></i><br>
                     <p class="fs-4 text-center">
                         employee <br><%= totalNumberOfemployee %>
 
@@ -67,7 +65,7 @@
 
         </div>
         <div class="col-md-4">
-            <div class="card my-card">
+            <div class="card ">
                 <div class="card-body text-center text-danger">
                     <i class="fas fa-user-circle fa-3x"></i><br>
                     <p class="fs-4 text-center">
@@ -77,74 +75,8 @@
             </div>
 
         </div>
-        <div class="col-md-4">
-            <div class="card my-card">
-                <div class="card-body text-center text-danger">
-                    <i class="fa-solid fa-calendar-check fa-3x"></i><br>
-                    <p class="fs-4 text-center">
-                        <%-- Total Appointment <br><%= totalNumberOfAppointment %>--%>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mt-2">
-            <div class="card my-card" data-bs-toggle="modal"
-                 data-bs-target="#exampleModal">
-                <div class="card-body text-center text-danger">
-                    <i class="fa-solid fa-user-employee fa-3x"></i><br>
-                    <p class="fs-4 text-center">
-                        <%-- Specialist <br><%= totalNumberOfSpecialist %>--%>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-</div>
-
-
-<!-- specialis modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1"
-     aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-danger" id="exampleModalLabel">Add Specialist</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <form action="../addSpecialist" method="post">
-
-                    <div class="form-group">
-                        <label class="form-label">Enter Specialist Name</label>
-                        <input type="text" name="specialistName" placeholder="Enter Specialist Name" class="form-control"/>
-                    </div>
-                    <div class="text-center mt-2">
-                        <button type="submit" class="btn btn-outline-danger">Add</button>
-                    </div>
-
-                </form>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close
-                </button>
-
-            </div>
-        </div>
     </div>
 </div>
-
-<!-- end of specialis modal -->
-
 
 </body>
 </html>

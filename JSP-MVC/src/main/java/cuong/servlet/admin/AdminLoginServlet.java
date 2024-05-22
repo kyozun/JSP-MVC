@@ -30,7 +30,6 @@ public class AdminLoginServlet extends HttpServlet {
                 resp.sendRedirect("admin_login.jsp");
             }
 
-
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -12,7 +12,6 @@ public class EmployeeDAO {
     private final Connection connection;
 
     public EmployeeDAO(Connection connection) {
-//        super();
         this.connection = connection;
     }
 
@@ -106,9 +105,7 @@ public class EmployeeDAO {
 
     // Update employee by id
     public boolean updateemployee(Employee employee) {
-
-        boolean f = false;
-
+        boolean isSuccess = false;
         try {
 
             String sql = "update cuong.employee set fullName=?,dateOfBirth=?,address=?,position=?,department=? where id=?";
@@ -125,39 +122,30 @@ public class EmployeeDAO {
 
             pstmt.executeUpdate();
             // if query updated or all ok than
-            f = true;
-
+            isSuccess = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return f;
+        return isSuccess;
     }
 
     // Delete employee by id
     public boolean deleteemployeeById(int id) {
-
-        boolean f = false;
-
+        boolean isSuccess = false;
         try {
-
             String sql = "delete from cuong.employee where id=?";
             PreparedStatement pstmt = this.connection.prepareStatement(sql);
             pstmt.setInt(1, id);
-
             pstmt.executeUpdate();
-
-            f = true;
-
+            isSuccess = true;
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return f;
+        return isSuccess;
     }
 
     // show total number of dynamic value in admin panel
-
     // create all count method here to reduce code line...
     // Count total employee Number
     public int countTotalemployee() {
@@ -180,58 +168,9 @@ public class EmployeeDAO {
         return i;
     }
 
-    // Count total Appointment Number
-//    public int countTotalAppointment() {
-//
-//        int i = 0;
-//
-//        try {
-//
-//            String sql = "select * from appointment";
-//            PreparedStatement pstmt = this.connection.prepareStatement(sql);
-//
-//            ResultSet resultSet = pstmt.executeQuery();
-//            while (resultSet.next()) {
-//
-//                i++;
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return i;
-//    }
-
-    // Count total number of Appointment for a specific employee
-//    public int countTotalAppointmentByemployeeId(int employeeId) {
-//
-//        int i = 0;
-//
-//        try {
-//
-//            String sql = "select * from appointment where employeeId=?";
-//            PreparedStatement pstmt = this.connection.prepareStatement(sql);
-//            pstmt.setInt(1, employeeId);
-//
-//            ResultSet resultSet = pstmt.executeQuery();
-//            while (resultSet.next()) {
-//
-//                i++;
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return i;
-//    }
-
     // Count total User Number
     public int countTotalUser() {
-
         int i = 0;
-
         try {
 
             String sql = "select * from cuong.user";
@@ -239,23 +178,19 @@ public class EmployeeDAO {
 
             ResultSet resultSet = pstmt.executeQuery();
             while (resultSet.next()) {
-
                 i++;
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return i;
     }
 
 
     // edit employee profile in employee panel edit profile
     public boolean editemployeeProfile(Employee employee) {
-
-        boolean f = false;
-
+        boolean isSuccess = false;
         try {
 
             //String sql = "update employee set fullName=?,dateOfBirth=?,qualification=?,specialist=?,email=?,phone=?,password=? where id=?";
@@ -272,13 +207,13 @@ public class EmployeeDAO {
 
             pstmt.executeUpdate();
             // if query updated or all okay than
-            f = true;
+            isSuccess = true;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return f;
+        return isSuccess;
     }
 
 }

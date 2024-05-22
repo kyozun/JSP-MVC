@@ -17,9 +17,7 @@ public class UpdateEmployeeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         try {
-
             // get all data which is coming from employee.jsp employee details
             String fullName = req.getParameter("fullName");
             String dateOfBirth = req.getParameter("dateOfBirth");

@@ -69,7 +69,7 @@
                             <input name="department" type="text" placeholder="Enter Department" class="form-control">
                         </div>
 
-                        <button type="submit" class="btn btn-danger text-white col-md-12">Add</button>
+                        <button type="submit" class="btn btn-success text-white col-md-12">Add</button>
                     </form>
                 </div>
 
