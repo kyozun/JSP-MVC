@@ -45,7 +45,7 @@
                     <!-- End of message print -->
 
                     <!-- boostrap form -->
-                    <form action="../addemployee" method="post">
+                    <form action="../addEmployee" method="post">
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
                             <input name="fullName" type="text" placeholder="Enter full name" class="form-control">
@@ -55,41 +55,18 @@
                             <input name="dateOfBirth" type="date" placeholder="Enter DOB" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Qualification</label>
-                            <input name="qualification" type="text" placeholder="Enter qualification" class="form-control">
+                            <label class="form-label">Address</label>
+                            <input name="address" type="text" placeholder="Enter Address" class="form-control">
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Specialist</label> <select
-                                class="form-control" name="specialist">
-                            <option disabled="disabled" selected="selected">---Select---</option>
-
-<%--                            <%--%>
-<%--                                SpecialistDAO spDAO = new SpecialistDAO(DBConnection.getConn());--%>
-<%--                                List<Specialist> spList = spDAO.getAllSpecialist();--%>
-<%--                                for (Specialist sp : spList) {--%>
-<%--                            %>--%>
-<%--                            <option>--%>
-<%--                                <%=sp.getSpecialistName()%>--%>
-<%--                            </option>--%>
-<%--                            <%--%>
-<%--                                }--%>
-<%--                            %>--%>
-
-                        </select>
+                            <label class="form-label">Position</label>
+                            <input name="position" type="text" placeholder="Enter Position" class="form-control">
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Email address</label>
-                            <input name="email" type="email" placeholder="Enter Email" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Phone</label>
-                            <input name="phone" type="text" placeholder="Enter mobile number" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input name="password" type="password" placeholder="Enter password" class="form-control">
+                            <label class="form-label">Department</label>
+                            <input name="department" type="text" placeholder="Enter Department" class="form-control">
                         </div>
 
                         <button type="submit" class="btn btn-danger text-white col-md-12">Add</button>

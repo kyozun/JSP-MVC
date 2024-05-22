@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/addemployee")
+@WebServlet("/addEmployee")
 public class AddEmployeeServlet extends HttpServlet {
 
     @Override
@@ -30,8 +30,8 @@ public class AddEmployeeServlet extends HttpServlet {
             HttpSession session = req.getSession();
 
             if (isSuccess) {
-                session.setAttribute("successMsg", "employee added successfully");
-                resp.sendRedirect("admin/add_employee.jsp");
+                session.setAttribute("successMsg", "Employee added successfully");
+                resp.sendRedirect("admin/view_employee.jsp");
             } else {
                 session.setAttribute("errorMsg", "Something went wrong on server");
                 resp.sendRedirect("admin/add_employee.jsp");
