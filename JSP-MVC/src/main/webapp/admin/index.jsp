@@ -1,5 +1,5 @@
 <%@page import="cuong.database.DBConnection" %>
-<%@page import="cuong.dao.DoctorDAO" %>
+<%@page import="cuong.dao.EmployeeDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -45,11 +45,11 @@
 
     <!-- create connection with db and others -->
     <%
-        DoctorDAO docDAO = new DoctorDAO(DBConnection.getConnection());
-        int totalNumberOfDoctor = docDAO.countTotalDoctor();
-        int totalNumberOfUser = docDAO.countTotalUser();
-//        int totalNumberOfAppointment = docDAO.countTotalAppointment();
-//        int totalNumberOfSpecialist = docDAO.countTotalSpecialist();
+        EmployeeDAO employeeDAO = new EmployeeDAO(DBConnection.getConnection());
+        int totalNumberOfemployee = employeeDAO.countTotalemployee();
+        int totalNumberOfUser = employeeDAO.countTotalUser();
+//        int totalNumberOfAppointment = employeeDAO.countTotalAppointment();
+//        int totalNumberOfSpecialist = employeeDAO.countTotalSpecialist();
     %>
 
     <!-- row-1 -->
@@ -57,9 +57,9 @@
         <div class="col-md-4">
             <div class="card my-card">
                 <div class="card-body text-center text-danger">
-                    <i class="fa-solid fa-user-doctor fa-3x"></i><br>
+                    <i class="fa-solid fa-user-employee fa-3x"></i><br>
                     <p class="fs-4 text-center">
-                        Doctor <br><%= totalNumberOfDoctor %>
+                        employee <br><%= totalNumberOfemployee %>
 
                     </p>
                 </div>
@@ -82,19 +82,18 @@
                 <div class="card-body text-center text-danger">
                     <i class="fa-solid fa-calendar-check fa-3x"></i><br>
                     <p class="fs-4 text-center">
-                        <%--                        Total Appointment <br><%= totalNumberOfAppointment %>--%>
+                        <%-- Total Appointment <br><%= totalNumberOfAppointment %>--%>
                     </p>
                 </div>
             </div>
-
         </div>
         <div class="col-md-4 mt-2">
             <div class="card my-card" data-bs-toggle="modal"
                  data-bs-target="#exampleModal">
                 <div class="card-body text-center text-danger">
-                    <i class="fa-solid fa-user-doctor fa-3x"></i><br>
+                    <i class="fa-solid fa-user-employee fa-3x"></i><br>
                     <p class="fs-4 text-center">
-                        <%--                        Specialist <br><%= totalNumberOfSpecialist %>--%>
+                        <%-- Specialist <br><%= totalNumberOfSpecialist %>--%>
                     </p>
                 </div>
             </div>
@@ -107,7 +106,6 @@
 
 
 <!-- specialis modal -->
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -128,7 +126,7 @@
                         <input type="text" name="specialistName" placeholder="Enter Specialist Name" class="form-control"/>
                     </div>
                     <div class="text-center mt-2">
-                        <button type="submit" class="btn btn-outline-danger ">Add</button>
+                        <button type="submit" class="btn btn-outline-danger">Add</button>
                     </div>
 
                 </form>

@@ -7,14 +7,11 @@
                                         aria-current="page" href="index.jsp"><i class="fa fa-home"></i>
                     HOME</a></li>
                 <li class="nav-item"><a class="nav-link active"
-                                        aria-current="page" href="add_doctor.jsp"><i
-                        class="fa-solid fa-user-doctor"></i> DOCTOR</a></li>
+                                        aria-current="page" href="add_employee.jsp"><i
+                        class="fa-solid fa-user-employee"></i> Add Employee</a></li>
                 <li class="nav-item"><a class="nav-link active"
-                                        aria-current="page" href="view_doctor.jsp"><i
-                        class="fa-solid fa-list"></i> VIEW DOCTOR</a></li>
-                <li class="nav-item"><a class="nav-link active"
-                                        aria-current="page" href="patient.jsp"><i
-                        class="fa fa-wheelchair"></i> PATIENT</a></li>
+                                        aria-current="page" href="view_employee.jsp"><i
+                        class="fa-solid fa-list"></i> View Employee</a></li>
             </ul>
 
             <div class="dropdown">
