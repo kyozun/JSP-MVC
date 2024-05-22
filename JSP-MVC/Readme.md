@@ -18,7 +18,7 @@ docker compose up -d
 ## Account
 
 To login: 
-user:admin@gmail.com
+user:admin@gmail.com,
 password=admin
 
 Please make sure to update tests as appropriate.
