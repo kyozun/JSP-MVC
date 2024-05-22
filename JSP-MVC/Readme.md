@@ -23,10 +23,10 @@ https://www.docker.com/products/docker-desktop/
 
 To login: 
 1. Visit: http://localhost:8080/hello/admin/admin_login.jsp
-2. user:admin@gmail.com,
-3. password=admin
+2. user = admin@gmail.com,
+3. password = admin
 
-Please make sure following step.
+Please make sure following above step.
 
 ## License
 
