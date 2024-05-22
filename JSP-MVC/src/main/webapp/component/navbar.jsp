@@ -22,9 +22,7 @@
                     <li class="nav-item"><a class="nav-link active"
                                             aria-current="page" href="/hello/admin/admin_login.jsp"><i
                             class="fa-solid fa-right-to-bracket"></i> Admin</a></li>
-                    <li class="nav-item"><a class="nav-link active"
-                                            aria-current="page" href="/product.jsp"><i
-                            class="fa fa-book fa-1x"></i> Product</a></li>
+
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/hello/user_login.jsp"><i
                             class="fas fa-sign-in-alt"></i>
                         User</a></li>

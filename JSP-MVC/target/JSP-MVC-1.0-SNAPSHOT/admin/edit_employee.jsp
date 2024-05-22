@@ -85,7 +85,7 @@
                             <input name="id" type="hidden" class="form-control" value="<%=employee.getId()%>">
                         </div>
 
-                        <button type="submit" class="btn btn-danger text-white col-md-12">Update</button>
+                        <button type="submit" class="btn btn-success text-white col-md-12">Update</button>
                     </form>
                 </div>
             </div>
