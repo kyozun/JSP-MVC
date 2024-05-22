@@ -70,6 +70,8 @@
                         </div>
 
                         <button type="submit" class="btn btn-success text-white col-md-12">Add</button>
+                        <br>
+                        <button type="reset" class="btn btn-danger text-white col-md-12">Reset</button>
                     </form>
                 </div>
 

@@ -65,7 +65,7 @@
                 <div class="col-md-6">
                     <div class="card my-card">
                         <div class="card-body">
-                            <p class="fs-5 myP-color">11000+ Healing Hands</p>
+                            <p class="fs-5 myP-color">Lorem</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque doloribus iusto
                                 libero perspiciatis rerum sit? Consectetur dignissimos doloremque eius esse,
                                 expedita incidunt ipsa ipsam ipsum, maxime nihil quidem unde voluptate.</p>
@@ -76,7 +76,7 @@
                 <div class="col-md-6">
                     <div class="card my-card">
                         <div class="card-body">
-                            <p class="fs-5 myP-color">Most Advance Healthcare Technology</p>
+                            <p class="fs-5 myP-color">Lorem</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse facilis iste
                                 quisquam. Aliquid aut eos magni nobis non nostrum perferendis placeat quae quos rem
                                 tempore temporibus ut veniam, vitae!</p>
@@ -87,7 +87,7 @@
                 <div class="col-md-6 mt-2">
                     <div class="card my-card">
                         <div class="card-body">
-                            <p class="fs-5 myP-color">Best Clinical Outcomes</p>
+                            <p class="fs-5 myP-color">Lorem</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse facilis iste
                                 quisquam. Aliquid aut eos magni nobis non nostrum perferendis placeat quae quos rem
                                 tempore temporibus ut veniam, vitae!</p>
@@ -98,7 +98,7 @@
                 <div class="col-md-6 mt-2">
                     <div class="card my-card">
                         <div class="card-body">
-                            <p class="fs-5 myP-color">500+ Pharmacies</p>
+                            <p class="fs-5 myP-color">Lorem</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nulla pariatur
                                 suscipit. Aliquam asperiores, beatae dolore eaque est eveniet expedita facere fugit
                                 laboriosam, nemo nobis perferendis praesentium quis quo ratione!</p>
