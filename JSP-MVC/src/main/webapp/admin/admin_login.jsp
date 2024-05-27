@@ -9,7 +9,7 @@
 
 <body>
 <%--NavBar--%>
-<%@include file="../component/navbar.jsp" %>
+<%@include file="navbar.jsp" %>
 
 <%--Admin Login--%>
 <div class="container p-5">
