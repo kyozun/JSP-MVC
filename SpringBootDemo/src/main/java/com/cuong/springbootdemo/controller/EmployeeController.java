@@ -43,25 +43,25 @@ public class EmployeeController {
 
     @GetMapping("/employees/edit/{id}")
     public String editEmployeeForm(@PathVariable Long id, Model model) {
-        model.addAttribute("student", employeeService.getEmployeeById(id));
-        return "edit_student";
+        model.addAttribute("Employee", employeeService.getEmployeeById(id));
+        return "edit_Employee";
     }
 
     @PostMapping("/employees/{id}")
-    public String updateEmployee(@PathVariable Long id, @ModelAttribute("student") Employee student, Model model) {
-        // get student from database by id
+    public String updateEmployee(@PathVariable Long id, @ModelAttribute("Employee") Employee Employee, Model model) {
+        // get Employee from database by id
         Employee existingEmployee = employeeService.getEmployeeById(id);
         existingEmployee.setId(id);
-        existingEmployee.setFirstName(student.getFirstName());
-        existingEmployee.setLastName(student.getLastName());
-        existingEmployee.setEmail(student.getEmail());
+        existingEmployee.setFirstName(Employee.getFirstName());
+        existingEmployee.setLastName(Employee.getLastName());
+        existingEmployee.setEmail(Employee.getEmail());
 
-        // save updated student object
+        // save updated Employee object
         employeeService.updateEmployee(existingEmployee, id);
         return "redirect:/employees";
     }
 
-    // handler method to handle delete student request
+    // handler method to handle delete Employee request
 
     @GetMapping("/employees/{id}")
     public String deleteEmployee(@PathVariable Long id) {

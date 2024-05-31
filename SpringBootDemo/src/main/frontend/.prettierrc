@@ -1,6 +1,6 @@
 {
-  "bracketSameLine": false,
-  "printWidth": 200,
+  "bracketSameLine": true,
+  "printWidth": 300,
   "singleQuote": false,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": false
 }
